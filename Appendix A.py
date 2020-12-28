@@ -59,14 +59,14 @@ for i in range(3):
         Bound_matrix[i, j] = assumption1(n, J)[1]
         
 ###########################################
-################ Table 6 ##################
+############## Table A.6 ##################
 ###########################################
 print('Table 6')        
 print('Bound under certain n and J values')
 print(Bound_matrix)
 
 ###########################################
-################ Table 7 ##################
+############## Table A.7 ##################
 ###########################################
 print('Table 7')
 print('Lipschitz bound under certain n and J values')
@@ -97,7 +97,7 @@ for i in range(3):
         meanr_matrix[i, j] = Meanr(degree_n[j], J, i)
 
 ###########################################
-################ Table 8 ##################
+############## Table A.8 ##################
 ###########################################
 print('Table 8')
 print('Expected ratio for verifying Assumption 2')
@@ -129,16 +129,16 @@ def plot_all(i):
         plt.savefig("images/Fig5(%s).png"%(loc[i]))
         
 ###########################################
-######### The left plot of Fig 5 ##########
+####### The left plot of Fig A.5 ##########
 ###########################################
 plot_all(0)
 
 #############################################
-######### The middle plot of Fig 5 ##########
+####### The middle plot of Fig A.5 ##########
 #############################################
 plot_all(1)
 
 ############################################
-######### The right plot of Fig 5 ##########
+####### The right plot of Fig A.5 ##########
 ############################################
 plot_all(2)

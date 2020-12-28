@@ -2,9 +2,6 @@ import os
 import scipy.io as sio  # for the i/o
 import numpy as np
 import numpy.polynomial.hermite_e as H
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.ticker import LinearLocator, FormatStrFormatter
-from matplotlib import cm
 from math import factorial
 from scipy.stats import norm
 from scipy.stats import gaussian_kde as kde
