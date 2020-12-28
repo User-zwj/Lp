@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import numpy.polynomial.hermite_e as H
 from scipy.stats import norm
@@ -89,12 +90,14 @@ for i in range(3):
 ###########################################
 ################ Table 1 ##################
 ###########################################
+print('Table 1')
 print('Bound under certain n and J values')
 print(Bound_matrix)
 
 ###########################################
 ################ Table 2 ##################
 ###########################################
+print('Table 2')
 print('Lipschitz bound under certain n and J values')
 print(Lip_Bound_matrix)
 
@@ -124,6 +127,10 @@ for i in range(5):
 # print('L^r error on data space for Forward Problem')
 # print(error_r_D)
 
+#### To make it cleaner, create Directory "images" to store all the figures ####
+imagepath = os.path.join(os.getcwd(),"images")
+os.makedirs(imagepath,exist_ok=True)
+
 ###########################################
 ######### The left plot of Fig 1 ##########
 ###########################################
@@ -137,7 +144,7 @@ plt.xlabel('Order of PCE (n)', fontsize=20)
 plt.yticks(fontsize=14, rotation=0)
 plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$', fontsize=20)
 plt.legend(prop={'size': 14})
-plt.savefig("Fig1(Left).png")
+plt.savefig("images/Fig1(Left).png")
 
 
 ##### Generate data for the right plot of Fig 1 #####
@@ -162,7 +169,7 @@ plt.xticks(fontsize=14, rotation=0)
 plt.xlabel('Order of PCE (n)', fontsize=20)
 plt.yticks(fontsize=14, rotation=0)
 plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$', fontsize=20)
-plt.savefig("Fig1(Right).png")
+plt.savefig("images/Fig1(Right).png")
 
 
 ##################################
@@ -204,6 +211,7 @@ for i in range(6):
 ###########################################
 ################ Table 3 ##################
 ###########################################
+print('Table 3')
 print('Expected ratio for verifying Assumption 2')
 print(Expect_r[1:])
 
@@ -234,4 +242,4 @@ plt.xticks(fontsize=14, rotation=0)
 plt.xlabel('Order of PCE (n)', fontsize=20)
 plt.yticks(fontsize=14, rotation=0)
 plt.ylabel('$L^2$'+' Error in Update', fontsize=20)
-plt.savefig("Fig2")
+plt.savefig("images/Fig2")
