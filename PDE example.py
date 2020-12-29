@@ -1,3 +1,10 @@
+#Note(Important): Since this file would require data from Data directory, 
+#you will need to first run GenerateData.py before you run this file.
+
+########################################################
+### This file is used to generate Table 4-5, Fig 3-4 ###
+########################################################
+
 import os
 import scipy.io as sio  # for the i/o
 import numpy as np

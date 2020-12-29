@@ -1,3 +1,7 @@
+######################################################################
+### This file is used to generate Data needed for "PDE example.py" ###
+######################################################################
+
 import os
 import numpy as np
 import dolfin as fn

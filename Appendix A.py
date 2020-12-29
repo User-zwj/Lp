@@ -1,3 +1,7 @@
+##########################################################
+### This file is used to generate Table A.6-8, Fig A.5 ###
+##########################################################
+
 import os
 import numpy as np
 from scipy.stats import norm

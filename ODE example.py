@@ -1,3 +1,7 @@
+########################################################
+### This file is used to generate Table 1-3, Fig 1-2 ###
+########################################################
+
 import os
 import numpy as np
 import numpy.polynomial.hermite_e as H
