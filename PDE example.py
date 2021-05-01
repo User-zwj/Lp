@@ -1,9 +1,9 @@
 #Note(Important): Since this file would require data from Data directory, 
 #you will need to first run GenerateData.py before you run this file.
 
-########################################################
-### This file is used to generate Table 4-5, Fig 3-4 ###
-########################################################
+################################################################
+### This file is used to generate Table 3.7-3.8, Fig 3.4-3.5 ###
+################################################################
 
 import os
 import scipy.io as sio  # for the i/o
@@ -13,6 +13,17 @@ from math import factorial
 from scipy.stats import norm
 from scipy.stats import gaussian_kde as kde
 from matplotlib import pyplot as plt
+
+####### Plot Formatting ######
+plt.rc('lines', linewidth = 4)
+plt.rc('xtick', labelsize = 13)
+plt.rc('ytick', labelsize = 13)
+plt.rc('legend',fontsize=14)
+plt.rcParams["font.family"] = "serif"
+plt.rcParams['axes.labelsize'] = 18
+plt.rcParams['axes.titlesize'] = 15
+plt.rcParams['lines.markersize'] = 8
+plt.rcParams['figure.figsize'] = (8.0, 6.0)
 
 proc_size = 25   # this number is determined by the data file
 
@@ -108,16 +119,16 @@ for i in range(3):
 
         
 ###########################################
-################ Table 4 ##################
+############### Table 3.7 #################
 ###########################################
-print('Table 4')
+print('Table 3.7')
 print('Bound under certain n and J values')
 print(Bound_matrix)
 
 ###########################################
-################ Table 5 ##################
+############### Table 3.8 #################
 ###########################################
-print('Table 5')
+print('Table 3.8')
 print('Lipschitz bound under certain n and J values')
 print(Lip_Bound_matrix)
 
@@ -157,19 +168,17 @@ imagepath = os.path.join(os.getcwd(),"images")
 os.makedirs(imagepath,exist_ok=True)
 
 ###########################################
-######### The left plot of Fig 3 ##########
+######## The left plot of Fig 3.4 #########
 ###########################################
 fig = plt.figure(figsize=(8, 6))
 plt.xlim([0, 6])
 marker = ['-D', '-o', '-v', '-s', '-.']
 for i in range(5):
     plt.semilogy([1, 2, 3, 4, 5], error_r_D[i, :], marker[i], label='r = ' + np.str(i+1))
-plt.xticks(fontsize=14, rotation=0)
-plt.xlabel('Order of PCE (n)', fontsize=20)
-plt.yticks(fontsize=14, rotation=0)
-plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$', fontsize=20)
-plt.legend(prop={'size': 14})
-plt.savefig("images/Fig3(Left).png")
+plt.xlabel('Order of PCE (n)')
+plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$')
+plt.legend()
+plt.savefig("images/lp_PDE_forward_error_D.png")
 
 
 ##### Generate data for the right plot of Fig 3 #####
@@ -188,16 +197,14 @@ for i in range(5):
 # print(error_2_Lam)
 
 ############################################
-######### The right plot of Fig 3 ##########
+######## The right plot of Fig 3.4 #########
 ############################################
 fig = plt.figure(figsize=(8, 6))
 plt.xlim([0, 6])
 plt.semilogy([1, 2, 3, 4, 5], error_2_Lam, '-s')  # , label='$L^2(\Lambda)$ error')
-plt.xticks(fontsize=14, rotation=0)
-plt.xlabel('Order of PCE (n)', fontsize=20)
-plt.yticks(fontsize=14, rotation=0)
-plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$', fontsize=20)
-plt.savefig("images/Fig3(Right).png")
+plt.xlabel('Order of PCE (n)')
+plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$')
+plt.savefig("images/lp_PDE_forward_error_lam.png")
 
 
 ##################################
@@ -241,7 +248,7 @@ print('Expected ratio for verifying Assumption 2')
 print(Expect_r[1:])
 
 
-##### Load data for Fig 4 #####
+##### Load data for Fig 3.5 #####
 # Print out Monte Carlo Approximation of $\|\pi_{\Lambda}^{u,n}(\lambda)-\pi_{\Lambda}^u(\lambda)\|_{L^2(\Lambda)} $
 init_eval = np.zeros(int(1E4))
 for i in range(int(1E4)):
@@ -272,13 +279,11 @@ for i in range(5):
 
 
 ###########################################
-################ Figure 4 #################
+################ Figure 3.5 #################
 ###########################################
 fig = plt.figure(figsize=(8, 6))
 plt.xlim([0, 6])
 plt.semilogy([1, 2, 3, 4, 5], error_Update, '-s')  # , label='$L^2(\Lambda)$ error')
-plt.xticks(fontsize=14, rotation=0)
-plt.xlabel('Order of PCE (n)', fontsize=20)
-plt.yticks(fontsize=14, rotation=0)
-plt.ylabel('$L^2$'+' Error in Update', fontsize=20)
-plt.savefig("images/Fig4")
+plt.xlabel('Order of PCE (n)')
+plt.ylabel('$L^2$'+' Error in Update')
+plt.savefig("images/lp_PDE_inverse_error.png")
