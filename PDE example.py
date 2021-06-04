@@ -34,7 +34,7 @@ def Hermite_2d(i, j, x, y):
 
 Q_FEM_quad = np.zeros(int(400))
 for i in range(proc_size):
-    filename = 'Data/Q_FEM_quad_' + str(i) + '.mat'
+    filename = os.path.join(os.getcwd(), "Data", "Q_FEM_quad_") + str(i) + ".mat"
     partial_data = sio.loadmat(filename)
     Q_FEM_quad += partial_data['Q_FEM'].reshape(int(400))
 
@@ -250,14 +250,14 @@ for i in range(int(1E4)):
 
 r = np.zeros(int(1E4))
 for i in range(proc_size):
-    filename = 'Data/r_' + str(i) + '.mat'
+    filename = os.path.join(os.getcwd(), "Data", "r_") + str(i) + ".mat"
     partial_data = sio.loadmat(filename)
     r += partial_data['r'].reshape(int(1E4))
 
 rn = np.zeros((6, int(1E4)))
 for i in range(6):
     for j in range(proc_size):
-        filename = 'Data/r' + str(i+1) + '_' + str(j) + '.mat'
+        filename = os.path.join(os.getcwd(), "Data", "r")  + str(i+1) + '_' + str(j) + ".mat"
         partial_data = sio.loadmat(filename)
         rn[i, :] += partial_data['r'].reshape(int(1E4))
 
