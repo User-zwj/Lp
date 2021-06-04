@@ -146,7 +146,7 @@ def r(nn, proc_num, proc_max):
 
     Q_FEM_quad = np.zeros(int(400))   #already include information of mu1, mu2, sigma1, sigma2
     for i in range(proc_size):         
-        filename = os.path.join(os.getcwd(), "Data_backup", "Q_FEM_quad_") + str(i) + '.mat' 
+        filename = os.path.join(os.getcwd(), "Data", "Q_FEM_quad_") + str(i) + '.mat' 
         partial_data = sio.loadmat(filename)
         Q_FEM_quad += partial_data['Q_FEM'].reshape(int(400))
 
