@@ -1,6 +1,6 @@
-######################################################################
-### This file is used to generate Data needed for "PDE example.py" ###
-######################################################################
+#############################################################################################
+### This file is used to generate Data needed for "PDE example.py" or "PDE example.ipynb" ###
+#############################################################################################
 
 import os
 import numpy as np
@@ -11,6 +11,7 @@ from scipy.stats import gaussian_kde as kde
 from scipy.stats import norm
 from math import factorial 
 
+## This is just set to be consistent with the number of files GenerateData_ParallelVersion.ipynb generates
 proc_size = 25 
 
 #### To make it cleaner, create Directory "Data" to store all the data ####
@@ -124,11 +125,7 @@ def Compute_Q(proc_num, proc_max, mu1=0, mu2=0, sigma1=0.1, sigma2=0.1, gridx=50
 #########################################################
 for i in range(proc_size):
     Compute_Q(i, proc_max=proc_size)
-    
-
-    
-    
-    
+      
 def r(nn, proc_num, proc_max):
     mu1 = 0
     mu2 = 0
@@ -146,7 +143,7 @@ def r(nn, proc_num, proc_max):
 
     Q_FEM_quad = np.zeros(int(400))   #already include information of mu1, mu2, sigma1, sigma2
     for i in range(proc_size):         
-        filename = os.path.join(os.getcwd(), "Data_backup", "Q_FEM_quad_") + str(i) + '.mat' 
+        filename = os.path.join(os.getcwd(), "Data", "Q_FEM_quad_") + str(i) + '.mat' 
         partial_data = sio.loadmat(filename)
         Q_FEM_quad += partial_data['Q_FEM'].reshape(int(400))
 
