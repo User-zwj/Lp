@@ -136,7 +136,7 @@ def plot_all(i):
                              label="$\pi_{\mathcal{D},J}^{Q(init)}$")
     plt.xlim([-1, 1])
     plt.legend()
-    plt.title(case[i])；
+    plt.title(case[i]);
     loc = ['Left','Mid','Right']
     if loc[i]:
         filename = os.path.join(os.getcwd(), "images", "Fig1(%s).png"%(loc[i])) 
