@@ -145,7 +145,7 @@ for i in range(5):
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$')
 plt.legend()
-# fig.savefig("images/1forward_error_D")
+# fig.savefig("images/1forward_error_D.png")
 plt.savefig("images/Fig2(Left).png")
 
 
@@ -171,7 +171,7 @@ plt.xlim([0,6])
 plt.semilogy([1,2,3,4,5],error_2,'-s')#,label='$L^2(\Lambda)$ error')    
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$')
-# fig.savefig("images/1forward_error_lam")
+# fig.savefig("images/1forward_error_lam.png")
 plt.savefig("images/Fig2(Right).png")
 
 
@@ -239,5 +239,5 @@ plt.xlim([0,6])
 plt.semilogy([1,2,3,4,5],error_update,'-s')#,label='$L^2(\Lambda)$ error')    
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Update')
-# fig.savefig("images/1inverse_error")
-plt.savefig("images/Fig3")
+# fig.savefig("images/1inverse_error.png")
+plt.savefig("images/Fig3.png")
