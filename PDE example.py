@@ -3,7 +3,7 @@
 # Way 2: run 'GenerateData_ParallelVersion.ipynb' and set multiple processors
 
 ################################################################
-### This file is used to generate Table 4-5, Fig 3-4 ###
+### This file is used to generate Table 7-8, Fig 4-5 ###
 ################################################################
 
 import os
