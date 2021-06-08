@@ -115,10 +115,10 @@ def pfprior_dens_n(n,x):
     pdf = kde(pfprior_sample_n)
     return pdf(x)
 
-#**Print out Monte Carlo Approximation of $	\|\pi_{\mathcal{D}}^Q(q)-\pi_{\mathcal{D}}^{Q_n}(q)\|_{L^r(\mathcal{D_c})} $ where $r>0$ and $D_c=[0,1]$**
+#**Print out Monte Carlo Approximation of $	\|\pi_{\mathcal{D}}^Q(q)-\pi_{\mathcal{D}}^{Q_n}(q)\|_{L^r(\mathcal{D_c})} $ where $r>0$ and $D_c=[0,2]$**
 error_r_D = np.zeros((5,5))
 np.random.seed(123456)            
-qsample = np.random.uniform(0,1,N_mc)
+qsample = np.random.uniform(0,2,N_mc)
 
 for i in range(5):
     for j in range(5):
