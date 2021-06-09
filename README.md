@@ -32,7 +32,7 @@ it will automatically print out data in Table 1-3 on the window. Besides that, a
 
 They are both used to generate Table 4-6, Fig 2-3. After running this file using command:
     
-    python ODE\ example.py
+        python ODE\ example.py
 
 it will automatically print out data in Table 4-6 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
 
@@ -41,7 +41,7 @@ it will automatically print out data in Table 4-6 on the window. Besides that, a
 
 They are both used to generate Table 7-8, Fig 4-5. You will need data from "Data" directory to help get results. (The way to generate these data will be explained below.) After running this file using command:
     
-    python PDE\ example.py
+        python PDE\ example.py
 
 it will automatically print out data in Table 7-8 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
 
@@ -50,6 +50,7 @@ it will automatically print out data in Table 7-8 on the window. Besides that, a
 
 These are all used to generate data required to run "PDE example.py" or "PDE example.ipynb". Note: you can run this file using command:
 
-    python GenerateData.py
+        
+        python GenerateData.py
     
 This will automatically create directory "Data" (if it does not exist) including all the needed data. You can skip this command and directly use the existing directory "Data" when you run "PDE example.py" to save your time.
