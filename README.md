@@ -55,19 +55,15 @@ This file is used to generate data required to run "PDE example.py". Note: you c
 This will automatically create directory "Data" (if it does not exist) including all the needed data. You can skip this command and directly use the existing directory "Data" when you run "PDE example.py" to save your time.
 
 
-### Branch - supplemental
+### Branch - IJUQ
 
-There are two directories in this branch, "Data" and "images".
+This repository is used to generate all the tables and figures in the following paper:
 
-- "Data" directory
+$L^p$ Convergence of Approximate Maps and Probability Densities for Forward and Inverse Problems in Uncertainty Quantification.
 
-It includes all the data needed to run "PDE example.py" in the master branch.
+### Branch - dissertation
 
-To manually generate these data, you can run "GenerateDate.py" in the master branch.
+This branch is used to generate all the tables and figures in Chapter 3 of my dissertation.
 
-- "images" directory
 
-It includes all the figures in the paper.
-
-To manually generate these figures, you can run "ODE example.py" to get Fig1-2, "PDE example.py" to get fIG 3-4 and "Appendix A.py" to get FigA.5.
 
