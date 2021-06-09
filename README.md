@@ -15,39 +15,40 @@ This repository is used to generate all the tables and figures in the following 
 All the code is current run on Python 3.6 mainly using NumPy, SciPy, matplotlib, OS, DOLFIN and math.
 
 
-### Current Branch - dissertation
+### Current Branch - IJUQ
 
+Both the notebook and py version for all examples are included. They return the same output. But there are more detailed explanations in the notebook version.
 
-- "Almost example.py"
+- "Almost example.py" and "Almost example.ipynb" 
 
-This file is used to generate Table 3.1-3.3, Fig 3.1. After running this file using command:
+They are both used to generate Table 1-3, Fig 1. After running this file using command:
     
-    python Appendix\ A.py
+        python Almost\ example.py
 
-it will automatically print out data in Table 3.1-3.3 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
+it will automatically print out data in Table 1-3 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures we just generated.
 
 
-- "ODE example.py"
+- "ODE example.py" and "ODE example.ipynb"
 
-This file is used to generate Table 3.4-3.6, Fig 3.2-3.3. After running this file using command:
+They are both used to generate Table 4-6, Fig 2-3. After running this file using command:
     
     python ODE\ example.py
 
-it will automatically print out data in Table 3.4-3.6 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
+it will automatically print out data in Table 4-6 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
 
 
-- "PDE example.py"
+- "PDE example.py" and "PDE example.ipynb"
 
-This file is used to generate Table 3.7-3.8, Fig 3.4-3.5. You will need data from "Data" directory to help get results. (The way to generate these data will be explained later.) After running this file using command:
+They are both used to generate Table 7-8, Fig 4-5. You will need data from "Data" directory to help get results. (The way to generate these data will be explained below.) After running this file using command:
     
     python PDE\ example.py
 
-it will automatically print out data in Table 3.7-3.8 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
+it will automatically print out data in Table 7-8 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
 
 
-- "GenerateData.py"
+- "GenerateData.py", "GenerateData.ipynb" and "GenerateData_ParallelVersion.ipynb"
 
-This file is used to generate data required to run "PDE example.py". Note: you can run this file using command:
+These are all used to generate data required to run "PDE example.py" or "PDE example.ipynb". Note: you can run this file using command:
 
     python GenerateData.py
     
