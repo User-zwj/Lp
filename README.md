@@ -1,8 +1,8 @@
 # Lp
 
-This repository is used to generate all the tables and figures in the following paper:
+This **master** repository is used to generate all the tables and figures in the following paper:
 
-*$L^p$ Convergence of Approximate Maps and Probability Densities for Forward and Inverse Problems in Uncertainty Quantification*.
+[*Convergence of Probability Densities using Approximate Models for Forward and Inverse Problems in Uncertainty Quantification: Extensions to $L^p$*](https://arxiv.org/abs/2001.04369)
 
 
 ***PS: There are 8 tables and 5 Figures in total.***
