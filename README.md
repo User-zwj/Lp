@@ -1,15 +1,11 @@
 # Lp
 
-This repository is used to generate all the tables and figures in the following paper:
-
-*$L^p$ Convergence of Approximate Maps and Probability Densities for Forward and Inverse Problems in Uncertainty Quantification*.
+This branch is used to generate all the tables and figures in Chapter 3 of my dissertation.
 
 
 ***PS: There are 8 tables and 5 Figures in total.***
 
 ----
-**Note: This branch is used to generate the same results in the dissertation but with different numbering and plot formatting**
-
 
 ## Dependencies
 All the code is current run on Python 3.6 mainly using NumPy, SciPy, matplotlib, OS, DOLFIN and math.
@@ -22,7 +18,7 @@ All the code is current run on Python 3.6 mainly using NumPy, SciPy, matplotlib,
 
 This file is used to generate Table 3.1-3.3, Fig 3.1. After running this file using command:
     
-    python Appendix\ A.py
+    python Almost\ example.py
 
 it will automatically print out data in Table 3.1-3.3 on the window. Besides that, a directory named "images" will be created automatically (if it does not exist) including all the figures you just generated.
 
