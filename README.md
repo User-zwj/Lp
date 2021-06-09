@@ -8,8 +8,6 @@ This repository is used to generate all the tables and figures in the following 
 ***PS: There are 8 tables and 5 Figures in total.***
 
 ----
-**Note: This branch is used to generate the same results in the dissertation but with different numbering and plot formatting**
-
 
 ## Dependencies
 All the code is current run on Python 3.6 mainly using NumPy, SciPy, matplotlib, OS, DOLFIN and math.
