@@ -10,12 +10,12 @@ import matplotlib.pyplot as plt
 
 ####### Plot Formatting ######
 plt.rc('lines', linewidth = 4)
-plt.rc('xtick', labelsize = 14)
-plt.rc('ytick', labelsize = 14)
-plt.rc('legend',fontsize=17)
+plt.rc('xtick', labelsize = 18)
+plt.rc('ytick', labelsize = 18)
+plt.rc('legend',fontsize=20)
 # plt.rcParams["font.family"] = "serif"
 plt.rcParams['axes.labelsize'] = 20
-plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['axes.titlesize'] = 28
 plt.rcParams['lines.markersize'] = 6
 plt.rcParams['figure.figsize'] = (7.0, 5.0)
 
@@ -129,11 +129,11 @@ def plot_all(i):
     case = ['Case I', 'Case II', 'Case III']
     qplot = np.linspace(-1, 1, num=100)
     observed_plot = plt.plot(qplot, norm.pdf(
-        qplot, loc=mus[i], scale=sigma), 'r-', label="$\pi_\mathcal{D}^{obs}$")
+        qplot, loc=mus[i], scale=sigma), 'r-.', label="$\pi_\mathcal{D}$")
     pf_init_plot = plt.plot(qplot, 1/10*np.abs(qplot)**(-4/5), 'b-',
-                             label="$\pi_\mathcal{D}^{Q(init)}$")
+                             label="$\pi_\mathcal{D}^{Q}$")
     pf_init_plot = plt.plot(qplot, q_nonlinear_kde(qplot), 'b--',
-                             label="$\pi_{\mathcal{D},J}^{Q(init)}$")
+                             label="$\pi_{\mathcal{D},m}^{Q}$")
     plt.xlim([-1, 1])
     plt.xlabel("$\mathcal{D}$")
     plt.legend()
