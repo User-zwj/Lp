@@ -12,11 +12,11 @@ import matplotlib.pyplot as plt
 plt.rc('lines', linewidth = 4)
 plt.rc('xtick', labelsize = 14)
 plt.rc('ytick', labelsize = 14)
-plt.rc('legend',fontsize=14)
-plt.rcParams["font.family"] = "serif"
+plt.rc('legend',fontsize=17)
+# plt.rcParams["font.family"] = "serif"
 plt.rcParams['axes.labelsize'] = 20
-plt.rcParams['axes.titlesize'] = 16
-plt.rcParams['lines.markersize'] = 8
+plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['lines.markersize'] = 6
 plt.rcParams['figure.figsize'] = (7.0, 5.0)
 
 # A simple example in Python: The Spaces, QoI, and Densities

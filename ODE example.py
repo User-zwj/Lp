@@ -13,14 +13,14 @@ from matplotlib import pyplot as plt
 
 
 ####### Plot Formatting ######
-plt.rc('lines', linewidth = 2)
+plt.rc('lines', linewidth = 1.5)
 plt.rc('xtick', labelsize = 14)
 plt.rc('ytick', labelsize = 14)
 plt.rc('legend',fontsize=14)
-plt.rcParams["font.family"] = "serif"
+# plt.rcParams["font.family"] = "serif"
 plt.rcParams['axes.labelsize'] = 20
-plt.rcParams['axes.titlesize'] = 16
-plt.rcParams['lines.markersize'] = 8
+plt.rcParams['axes.titlesize'] = 12
+plt.rcParams['lines.markersize'] = 6
 plt.rcParams['figure.figsize'] = (8.0, 6.0)
 
 def Phi(n):
@@ -145,7 +145,8 @@ for i in range(5):
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$')
 plt.legend();
-plt.savefig("images/Fig2(Left).png")
+# fig.savefig("images/1forward_D_uniform.png")
+fig.savefig("images/Fig2(Left).png")
 
 #################### Verify Theorem 3.1 ###############
 ##### Generate data for the right plot of Fig 2 #####
@@ -167,7 +168,8 @@ plt.xlim([0,6])
 plt.semilogy([1,2,3,4,5],error_2,'-s')   
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$');
-plt.savefig("images/Fig2(Right).png")
+# fig.savefig("images/1forward_Lam_uniform.png")
+fig.savefig("images/Fig2(Right).png")
 
 
 ##################################
@@ -232,4 +234,5 @@ plt.xlim([0,6])
 plt.semilogy([1,2,3,4,5],error_update,'-s')   
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Update');
-plt.savefig("images/Fig3.png")
+# fig.savefig("images/1inverse_error_uniform.png")
+fig.savefig("images/Fig3.png")

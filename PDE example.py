@@ -16,14 +16,14 @@ from scipy.stats import gaussian_kde as kde
 from matplotlib import pyplot as plt
 
 ####### Plot Formatting ######
-plt.rc('lines', linewidth = 2)
+plt.rc('lines', linewidth = 1.5)
 plt.rc('xtick', labelsize = 14)
 plt.rc('ytick', labelsize = 14)
 plt.rc('legend',fontsize=14)
-plt.rcParams["font.family"] = "serif"
+# plt.rcParams["font.family"] = "serif"
 plt.rcParams['axes.labelsize'] = 20
 plt.rcParams['axes.titlesize'] = 12
-plt.rcParams['lines.markersize'] = 8
+plt.rcParams['lines.markersize'] = 6
 plt.rcParams['figure.figsize'] = (8.0, 6.0)
 
 proc_size = 25   # this number is determined by the number of data files
@@ -175,7 +175,7 @@ plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^r$'+' Error in Push-Forward on '+'$\mathcal{D}$')
 plt.legend()
 # fig.savefig("images/2forward_error_D.png")
-plt.savefig("images/Fig4(Left).png")
+fig.savefig("images/Fig4(Left).png")
 
 
 #################### Verify Theorem 3.1 ###############
@@ -204,7 +204,7 @@ plt.semilogy([1,2,3,4,5], error_2_Lam, '-s' )#, label='$L^2(\Lambda)$ error')
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Push-Forward on '+'$\Lambda$')
 # fig.savefig("images/2forward_error_lam.png")
-plt.savefig("images/Fig4(Right).png")
+fig.savefig("images/Fig4(Right).png")
 
 
 ##################################
@@ -280,4 +280,4 @@ plt.semilogy([1,2,3,4,5], error_Update, '-s')#, label='$L^2(\Lambda)$ error')
 plt.xlabel('Order of PCE (n)')
 plt.ylabel('$L^2$'+' Error in Update')
 # fig.savefig("images/2inverse_error.png")
-plt.savefig("images/Fig5.png")
+fig.savefig("images/Fig5.png")
